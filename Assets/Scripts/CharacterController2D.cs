@@ -51,14 +51,11 @@ public class CharacterController2D : MonoBehaviour
         }
     }
 
-    
     void FixedUpdate()
     {
         Move();
     }
      
-
-
     private void Move()
     {
         _rigidbody2D.velocity = _motionVector * speed;
