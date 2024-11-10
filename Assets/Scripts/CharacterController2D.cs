@@ -15,9 +15,9 @@ public class CharacterController2D : MonoBehaviour
 
     private Vector2 _motionVector;
 
-    public Vector2 LastMotionVector;
-
     private Animator _animator;
+
+    public Vector2 LastMotionVector;
 
     public bool IsMoving;
 
