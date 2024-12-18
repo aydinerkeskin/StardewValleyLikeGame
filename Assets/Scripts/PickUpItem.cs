@@ -6,14 +6,12 @@ public class PickUpItem : MonoBehaviour
 {
     private Transform _player;
 
-    [SerializeField]
-    float speed = 3.5f;
+    [SerializeField] float speed = 3.5f;
+    [SerializeField] float pickUpDistance = 1.5f;
+    [SerializeField] float ttl = 10.0f;
 
-    [SerializeField]
-    float pickUpDistance = 1.5f;
-
-    [SerializeField]
-    float ttl = 10.0f;
+    public Item item;
+    public int count = 1;
 
     private void Awake()
     {
@@ -45,6 +43,15 @@ public class PickUpItem : MonoBehaviour
         if (distance < 0.1f)
         {
             Debug.Log("pick up item.");
+
+            if (GameManager.Instance.inventoryContainer != null)
+            {
+                GameManager.Instance.inventoryContainer.Add(item, count);
+            }
+            else
+            {
+                Debug.LogWarning("No inventory container attached to the game manager.");
+            }
 
             // Yerden alınabilir obje 0.1f den yakınsa, tamamen sahneden kaldırılıyor.
             Destroy(gameObject);
