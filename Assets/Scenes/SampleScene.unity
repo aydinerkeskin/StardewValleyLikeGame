@@ -1768,6 +1768,7 @@ GameObject:
   - component: {fileID: 583758517}
   - component: {fileID: 583758519}
   - component: {fileID: 583758520}
+  - component: {fileID: 583758521}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1789,6 +1790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 175008146}
   inventoryContainer: {fileID: 11400000, guid: 8af310da79a80d54e98b9e42992b2e23, type: 2}
+  dragAndDropController: {fileID: 583758521}
 --- !u!4 &583758518
 Transform:
   m_ObjectHideFlags: 0
@@ -1893,6 +1895,18 @@ MonoBehaviour:
   text: {fileID: 807022263}
   timeScale: 600
   globalLight: {fileID: 2069303107}
+--- !u!114 &583758521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583758516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564b5acf240ca304588414d12d074d4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &661765421
 PrefabInstance:
   m_ObjectHideFlags: 0
